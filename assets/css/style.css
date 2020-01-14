@@ -1,0 +1,50 @@
+body {
+    background-color: #0b0c10;
+    text-align: center;
+    background-image: url("../images/bg_pattern.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header {
+    padding-top: 50px;
+}
+
+#header {
+    color: #66fcf1;
+    font-style: bold;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 3PX;
+    font-size: 40px;
+    margin-top: 50px;
+
+}
+
+#description {
+    color: #45a29e;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 2PX;
+    font-size: 32px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+.container {
+    color: #ffffff;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 1PX;
+    font-size: 25px;
+}
+
+li {
+    padding-top: 16px;
+    margin-bottom:16px;
+}
+
+#board {
+    color: #ffffff;
+}
+.scoreBoard {
+    list-style: none;
+}
