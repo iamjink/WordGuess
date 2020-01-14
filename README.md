@@ -1,0 +1,2 @@
+# WordGuess
+recommended JavaScript homework
