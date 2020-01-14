@@ -1,10 +1,12 @@
 # WordGuess
 recommended JavaScript homework
 
-Word Guess Game:
-User guesses words to win by pressing keys.
+Word Guess Game
 
-Number of guesses and wins and losses will be displayed in browser. 
-
-When user loses or wins, the game resets for a new round!
+Game Rules:
+press any key to get started.
+It's a hang man style game,
+so you get to guess what song the computer is thinking of by choosing letters.
+if you choose all the letters correctly,
+the Britney song will play!
 

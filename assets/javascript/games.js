@@ -1,6 +1,10 @@
+//jquery document.ready 
 
-//letter choices
-var userChoices = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h','i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+$(document).ready(function() {
+
+// choices
+var userChoices = ['baby one more time', 'oops! i did it again', 'crazy', 'stronger', 'work bitch!', 'from the bottom of my broken heart', 'everytime', 'make me','piece of me', 'if you seek amy', 'womanizer', 'circus', 'i wanna go', '3', 'hold it against me', 'scream & shout'];
+
 
 //randomizing letter choices that user can type from userChoices array. math.floor() returns largest element less than or equal to in array
 var computerChoices = userChoices[Math.floor(Math.random() * userChoices.length)]; 
@@ -8,25 +12,25 @@ var computerChoices = userChoices[Math.floor(Math.random() * userChoices.length)
 //setting each variable to start
 var win = 0;
 var losses = 0;
-var guessCountdown = 9;
+var guessCountdown = 10;
 var letterPressed = [];
 
 //defining each function and changing text in the scoreBoard div
 
 //replaces guess count down number 
 function userGuessCount() {
-    document.querySelector("#guessCountdown").innerHTML = "Guesses Left: " + guessCountdown;
+    document.querySelector("#guessCountdown").innerHTML = guessCountdown;
 }
 
 //replaces text #userGuess from HTML to "your guess so far: key pressed"
 function userText() {
-    document.querySelector("#userGuess").innerHTML = "Your Guesses So Far: " + letterPressed;
+    document.querySelector("#userGuess").innerHTML = letterPressed;
 
 }
 
 //defining reset function to set guessCountdown back to 9 and letterPressed to start over
 var reset = function() {
-    guessCountdown = 9;
+    guessCountdown = 10;
     letterPressed = [];
 }
 
@@ -59,7 +63,7 @@ if (userGuess === computerChoices) {
 //if the guess countdown goes to 0, then loss number increase by 1
 else if (guessCountdown === 0){
     losses++;
-    document.querySelector("#losses").innerHTML = "Losses: " + losses;
+    document.querySelector("#currentWord").innerHTML = losses;
     
     //when guessCountdown goes to 0, then reset function happens
     reset();
@@ -68,3 +72,4 @@ else if (guessCountdown === 0){
 };
 
 
+});

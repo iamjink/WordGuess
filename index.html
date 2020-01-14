@@ -10,28 +10,51 @@
     <link href="https://fonts.googleapis.com/css?family=Anton|Passion+One&display=swap" rel="stylesheet">
 
 
-    <title>Psychic-Game</title>
+    <title>Word Guess Game</title>
 </head>
 
-<body>
-    <div class="header">
-        <h1 id="header">THE PSYCHIC GAME</h1>
-    </div>
 
-    <h2 id="description">Guess What letter I'm thinking of</h2>
+<body>
+    <img id="BritneyTitle" src="assets/images/BSSV2.png">
+
+    <div class="header">
+        <h1 id="header">Britney Spears Guess Game</h1>
+    </div>
+    <br>
+
+    <h2 id="description">Guess The Britney Song Name And It Will Play!</h2>
+    <br>
 
     <div class="container">
         <ul id="board" class="scoreBoard">
-            <li class="listItem" id="wins">Wins:</li>
-            <li class="listItem" id="losses">Losses:</li>
-            <li class="listItem" id="guessCountdown">Guesses Left:</li>
-            <li class="listItem" id="userGuess">Your Guesses So Far:</li>
+            <li class="listItem" >Wins</li>
+            <div id="wins"></div>
+
+            <span class="break"></span>
+
+            <li class="listItem">Current Word</li>
+            <div id="currentWord"></div>
+
+            <span class="break"></span>
+
+            <li class="listItem" >Number of Guesses Remaing</li>
+            <div id="guessCountdown">10</div>
+
+            <span class="break"></span>
+
+            <li class="listItem" >Letters Already Guessed</li>
+            <div id="userGuess"></div>
+
+            <span class="break"></span>
         </ul>
     </div>
 
 
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script type="text/javascript" src="assets/javascript/games.js"></script>
 
 </body>
+
 
 </html>

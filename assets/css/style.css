@@ -1,9 +1,14 @@
 body {
-    background-color: #0b0c10;
+    background-color: #C34271;
     text-align: center;
-    background-image: url("../images/bg_pattern.jpg");
+    background-image: url("../images/600x600bf\ copy.png");
     background-size: cover;
     background-repeat: no-repeat;
+
+}
+
+#BritneyTitle {
+    padding-top: 40px;
 }
 
 .header {
@@ -11,7 +16,7 @@ body {
 }
 
 #header {
-    color: #66fcf1;
+    color: #df208e;
     font-style: bold;
     font-family: 'Anton', sans-serif;
     letter-spacing: 3PX;
@@ -21,10 +26,10 @@ body {
 }
 
 #description {
-    color: #45a29e;
+    color: #f19ecd;
     font-family: 'Anton', sans-serif;
     letter-spacing: 2PX;
-    font-size: 32px;
+    font-size: 25px;
     margin-top: 15px;
     margin-bottom: 15px;
 
@@ -38,8 +43,8 @@ body {
 }
 
 li {
-    padding-top: 16px;
-    margin-bottom:16px;
+    padding-top: 32px;
+    margin-bottom:32px;
 }
 
 #board {
@@ -47,4 +52,9 @@ li {
 }
 .scoreBoard {
     list-style: none;
+}
+
+.break{
+    display:block;
+    margin:0 0 1em;
 }
