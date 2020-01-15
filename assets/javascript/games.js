@@ -1,6 +1,4 @@
-//jquery document.ready 
-
-// $(document).ready(function() {
+$(document).ready(function() {
 
 var songChoices = ['baby one more time', 'oops! i did it again', 'crazy', 'stronger', 'work bitch!', 'from the bottom of my broken heart', 'everytime', 'make me','piece of me', 'if you seek amy', 'womanizer', 'circus', 'i wanna go', '3', 'hold it against me', 'scream & shout'];
 
@@ -45,7 +43,7 @@ function letterstoMatch(letter){
 
         if (guessCountdown === 0) {
             letterPressed = computerWord.split()
-            GameEnd = true;
+            // GameEnd = true;
             reset();
         }
     }
@@ -67,7 +65,7 @@ function reset() {
         if (computerWord[i]==="") {
             letterPressed.push("")
         } else {
-            letterPressed.push("_")
+            letterPressed.push("")
         }
     }
     updateText();
@@ -80,11 +78,11 @@ function isAlpha(ch){
 
 //function for updating text in browser in each category
 function updateText() {
-    document.querySelector("#winsNum").innerText = wins;
-    document.querySelector("#currentWord").innerText = WordGuess.join("");
-    document.querySelector("#guessCountdown").innerText = guessCountdown;
-    document.querySelector("#userGuess").innerText = letterPressed.join("");
+    document.querySelector("#winsNum").innerHTML = wins;
+    document.querySelector("#currentWord").innerHTML = WordGuess.join("");
+    document.querySelector("#guessCountdown").innerHTML = guessCountdown;
+    document.querySelector("#userGuess").innerHTML = letterPressed.join("");
 
 }
 
-// });
+});
