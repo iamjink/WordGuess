@@ -4,7 +4,7 @@ body {
     background-image: url("../images/600x600bf\ copy.png");
     background-size: cover;
     background-repeat: no-repeat;
-
+    width:100%;
 }
 
 #BritneyTitle {
