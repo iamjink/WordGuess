@@ -17,12 +17,12 @@ reset();
 //if key pressed is A-Z range, as stated in function isAlpha, then run letterMatch function upon keypress
 document.onkeypress = function(event){
     if(isAlpha(event.key) && !GameEnd) {
-        letterMatch(event.key.toUpperCase());
+        letterstoMatch(event.key.toUpperCase());
     };
 }
 
 //game function. check to see if letter is in compputerWord
-function letterMatch(letter){
+function letterstoMatch(letter){
     letterMatch = false; 
     for (i=0, j=computerWord.length; i<j; i++) {
         if (letter === computerWord[i]) {
@@ -32,6 +32,7 @@ function letterMatch(letter){
             if (WordGuess.join("")===computerWord) {
                 wins++;
                 GameEnd = true;
+                reset()
             };
         };
     };
@@ -45,6 +46,7 @@ function letterMatch(letter){
         if (guessCountdown === 0) {
             letterPressed = computerWord.split()
             GameEnd = true;
+            reset();
         }
     }
 
@@ -78,10 +80,10 @@ function isAlpha(ch){
 
 //function for updating text in browser in each category
 function updateText() {
-    document.querySelector("winsNum").innerText = wins;
-    document.querySelector("currentWord").innerText = WordGuess.join("");
-    document.querySelector("guessCountdown").innerText = guessCountdown;
-    document.querySelector("userGuess").innerText = letterPressed.join("");
+    document.querySelector("#winsNum").innerText = wins;
+    document.querySelector("#currentWord").innerText = WordGuess.join("");
+    document.querySelector("#guessCountdown").innerText = guessCountdown;
+    document.querySelector("#userGuess").innerText = letterPressed.join("");
 
 }
 
