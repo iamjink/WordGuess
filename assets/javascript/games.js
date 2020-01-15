@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-var songChoices = ['baby one more time', 'oops! i did it again', 'crazy', 'stronger', 'work bitch!', 'from the bottom of my broken heart', 'everytime', 'make me','piece of me', 'if you seek amy', 'womanizer', 'circus', 'i wanna go', '3', 'hold it against me', 'scream & shout'];
+var songChoices = ['baby one more time', 'oops i did it again', 'crazy', 'stronger', 'work bitch', 'from the bottom of my broken heart', 'everytime', 'make me','piece of me', 'if you seek amy', 'womanizer', 'circus', 'i wanna go', 'hold it against me'];
 
 var wins = 0;
 var guessCountdown = 10;
@@ -30,7 +30,7 @@ function letterstoMatch(letter){
             if (WordGuess.join("")===computerWord) {
                 wins++;
                 GameEnd = true;
-                reset()
+                reset();
             };
         };
     };
@@ -43,7 +43,7 @@ function letterstoMatch(letter){
 
         if (guessCountdown === 0) {
             letterPressed = computerWord.split()
-            // GameEnd = true;
+            GameEnd = true;
             reset();
         }
     }
@@ -52,22 +52,29 @@ function letterstoMatch(letter){
 
 }
 
-//reset game function
+//reset game function everything to zero
 
 function reset() {
+    
     GameEnd = false;
-
+    computerWord = songChoices[Math.floor(Math.random() * songChoices.length)].toUpperCase();
     //resetting words and letters
     letterPressed = [];
     WordGuess = [];
+    guessCountdown = 10;
+    
+    console.log(computerWord);
 
-    for(i=0, j=computerWord.length; i<j; i++) {
-        if (computerWord[i]==="") {
-            letterPressed.push("")
+    for(var i=0, j=computerWord.length; i<j; i++) {
+        
+        // if wordGuess (random computer word) has an empty space, then push space, if not, then use underscore
+        if (computerWord[i]===" ") {
+            WordGuess.push(" ")
         } else {
-            letterPressed.push("")
+            WordGuess.push("_")
         }
     }
+
     updateText();
 }
 
